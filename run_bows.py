@@ -36,7 +36,7 @@ function = getattr(test_functions, test_function_name)
 kernel = gpytorch.kernels.ScaleKernel(gpytorch.kernels.RBFKernel())
 
 # Loop over multiple runs
-for trial in range(7, ntrial):
+for trial in range(ntrial):
     print(f"\n***TRIAL {trial}***\n")
     utils.set_seed(trial)
     start, iter_times = time.time(), []
